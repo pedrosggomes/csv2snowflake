@@ -25,9 +25,9 @@ def create_tables():
                 print(f"Creating table {table_name}...")
                 cs.execute(ddl)
         conn.commit()
-        print("✅ All tables created successfully!")
+        print("All tables created successfully!")
     except Exception as e:
-        print(f"❌ Error creating tables: {e}")
+        print(f"Error creating tables: {e}")
         if conn:
             conn.rollback()
         raise
